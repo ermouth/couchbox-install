@@ -20,7 +20,7 @@
 ssh root@server
 cd /tmp
 git clone git@gitlab.com:Couchbox/install.git couchbox_install
-cd /tmp/couchbox_install
+cd /tmp/couchbox_install/Ubuntu
 sh install.sh
 ```
 
