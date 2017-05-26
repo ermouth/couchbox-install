@@ -29,8 +29,8 @@ sudo chmod 770 /var/log/couchbox
 
 # clone repo
 cd /home/couchbox/services
-# you can use your git account  https://username:password@gitlab.com/ermouth/couchbox.git
-sudo git clone git@gitlab.com:ermouth/couchbox.git
+# you can use your git account  https://username:password@gitlab.com/Couchbox/couchbox.git
+sudo git clone git@gitlab.com:Couchbox/couchbox.git
 
 
 # install npm modules
