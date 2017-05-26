@@ -13,40 +13,40 @@ BASEDIRPATH=$(realpath $BASEDIR)
 
 
 # Prepare
-su -c "sh $BASEDIRPATH/0-root-prepare.sh"
+su -c "sh $BASEDIRPATH/00-prepare.sh"
 
 # User
-su -c "sh $BASEDIRPATH/1-root-user.sh"
+su -c "sh $BASEDIRPATH/01-user.sh"
 
 # nodejs
-su -c "sh $BASEDIRPATH/2-ubuntu-nodejs.sh" - $USER_NAME
+su -c "sh $BASEDIRPATH/02-nodejs.sh" - $USER_NAME
 
 # couchdb install
-su -c "sh $BASEDIRPATH/3-ubuntu-couchdb.sh" - $USER_NAME
+su -c "sh $BASEDIRPATH/03-couchdb.sh" - $USER_NAME
 
 # couchdb config
-su -c "sh $BASEDIRPATH/4-ubuntu-couchdb-configure.sh" - $USER_NAME
+su -c "sh $BASEDIRPATH/04-couchdb-configure.sh" - $USER_NAME
 
 # redis install
-su -c "sh $BASEDIRPATH/5-ubuntu-redis.sh" - $USER_NAME
+su -c "sh $BASEDIRPATH/05-redis.sh" - $USER_NAME
 
 # redis config
-su -c "sh $BASEDIRPATH/6-ubuntu-redis-configure.sh" - $USER_NAME
+su -c "sh $BASEDIRPATH/06-redis-configure.sh" - $USER_NAME
 
 # couchbox install
-su -c "sh $BASEDIRPATH/7-ubuntu-couchbox.sh" - $USER_NAME
+su -c "sh $BASEDIRPATH/07-couchbox.sh" - $USER_NAME
 
 # couchbox config
-su -c "sh $BASEDIRPATH/8-ubuntu-couchbox-configure.sh" - $USER_NAME
+su -c "sh $BASEDIRPATH/08-couchbox-configure.sh" - $USER_NAME
 
 # nginx install
-su -c "sh $BASEDIRPATH/9-ubuntu-nginx.sh" - $USER_NAME
+su -c "sh $BASEDIRPATH/09-nginx.sh" - $USER_NAME
 
 # nginx config
-su -c "sh $BASEDIRPATH/10-ubuntu-nginx-config.sh" - $USER_NAME
+su -c "sh $BASEDIRPATH/10-nginx-config.sh" - $USER_NAME
 
 # ufw config
-su -c "sh $BASEDIRPATH/11-ubuntu-ufw.sh" - $USER_NAME
+su -c "sh $BASEDIRPATH/11-ufw.sh" - $USER_NAME
 
 
 

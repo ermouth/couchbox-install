@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo ""
-echo "START 1-root-user.sh"
+echo "START 01-user.sh"
 echo ""
 
 
@@ -26,5 +26,5 @@ usermod -aG sudo $USER_NAME
 echo "$USER_NAME ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 
-echo "DONE 1-root-user.sh"
+echo "DONE 01-user.sh"
 exit 0

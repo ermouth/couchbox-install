@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo ""
-echo "START 6-ubuntu-redis-configure.sh"
+echo "START 06-redis-configure.sh"
 echo ""
 
 
@@ -59,5 +59,5 @@ sudo service redis start
 sudo systemctl enable redis
 
 
-echo "DONE 6-ubuntu-redis-configure.sh"
+echo "DONE 06-redis-configure.sh"
 exit 0

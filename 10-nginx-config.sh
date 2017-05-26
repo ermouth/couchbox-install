@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo ""
-echo "START 10-ubuntu-nginx-config.sh"
+echo "START 10-nginx-config.sh"
 echo ""
 
 
@@ -26,5 +26,5 @@ sudo ln -s /etc/nginx/sites-available/couchbox /etc/nginx/sites-enabled/couchbox
 sudo service nginx start
 
 
-echo "DONE 10-ubuntu-nginx-config.sh"
+echo "DONE 10-nginx-config.sh"
 exit 0

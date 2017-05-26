@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo ""
-echo "START 8-ubuntu-couchbox-configure.sh"
+echo "START 08-couchbox-configure.sh"
 echo ""
 
 
@@ -64,5 +64,5 @@ sudo service couchbox start
 sudo systemctl enable couchbox
 
 
-echo "DONE 8-ubuntu-couchbox-configure.sh"
+echo "DONE 08-couchbox-configure.sh"
 exit 0

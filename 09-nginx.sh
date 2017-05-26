@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo ""
-echo "START 9-ubuntu-nginx.sh"
+echo "START 09-nginx.sh"
 echo ""
 
 
@@ -16,5 +16,5 @@ sudo apt-get update -y
 sudo apt-get install nginx -y
 
 
-echo "DONE 9-ubuntu-nginx.sh"
+echo "DONE 09-nginx.sh"
 exit 0

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo ""
-echo "START 0-root-prepare.sh"
+echo "START 00-prepare.sh"
 echo ""
 
 
@@ -17,5 +17,5 @@ apt-get upgrade -y
 apt-get install build-essential curl -y
 
 
-echo "DONE 0-root-prepare.sh"
+echo "DONE 00-prepare.sh"
 exit 0

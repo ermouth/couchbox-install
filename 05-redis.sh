@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo ""
-echo "START 5-ubuntu-redis.sh"
+echo "START 05-redis.sh"
 echo ""
 
 
@@ -29,5 +29,5 @@ make
 sudo make install
 
 
-echo "DONE 5-ubuntu-redis.sh"
+echo "DONE 05-redis.sh"
 exit 0

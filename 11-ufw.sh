@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo ""
-echo "START 11-ubuntu-ufw.sh"
+echo "START 11-ufw.sh"
 echo ""
 
 
@@ -35,5 +35,5 @@ sudo ufw allow 8881
 sudo ufw --force enable
 
 
-echo "DONE 11-ubuntu-ufw.sh"
+echo "DONE 11-ufw.sh"
 exit 0

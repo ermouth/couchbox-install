@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo ""
-echo "START 2-ubuntu-nodejs.sh"
+echo "START 02-nodejs.sh"
 echo ""
 
 
@@ -16,5 +16,5 @@ curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
 
-echo "DONE 2-ubuntu-nodejs.sh"
+echo "DONE 02-nodejs.sh"
 exit 0

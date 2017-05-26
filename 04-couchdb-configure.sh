@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo ""
-echo "START 4-ubuntu-couchdb-configure.sh"
+echo "START 04-couchdb-configure.sh"
 echo ""
 
 
@@ -139,5 +139,5 @@ EOF
 sudo service couchdb start
 
 
-echo "DONE 4-ubuntu-couchdb-configure.sh"
+echo "DONE 04-couchdb-configure.sh"
 exit 0

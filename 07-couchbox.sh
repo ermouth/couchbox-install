@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo ""
-echo "START 7-ubuntu-couchbox.sh"
+echo "START 07-couchbox.sh"
 echo ""
 
 
@@ -38,5 +38,5 @@ cd couchbox
 sudo npm install
 
 
-echo "DONE 7-ubuntu-couchbox.sh"
+echo "DONE 07-couchbox.sh"
 exit 0

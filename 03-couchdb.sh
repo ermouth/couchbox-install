@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo ""
-echo "START 3-ubuntu-couchdb.sh"
+echo "START 03-couchdb.sh"
 echo ""
 
 
@@ -39,5 +39,5 @@ sudo chmod 664 /etc/couchdb/*.ini
 sudo chmod 775 /etc/couchdb/*.d
 
 
-echo "DONE 3-ubuntu-couchdb.sh"
+echo "DONE 03-couchdb.sh"
 exit 0
