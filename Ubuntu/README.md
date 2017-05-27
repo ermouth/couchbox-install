@@ -1,27 +1,24 @@
-Компоненты
-----------
+# Couchbox install for Ubuntu 14+
 
- - CouchDB
- - Redis
- - Nginx
- - NodeJs
- - UFW
- - Couchbox
+This set of scripts installs and starts CouchDB 1.6.1, Redis, nginx, nodejs, UFW 
+and Couchbox over clean Ubuntu. You can a) clone this repo, or 
+b) download  install_couchbox_ubuntu.zip into temp folder and unpack it. 
+Next, [preconfigure](#preconfigure) installation scripts and [run the sequence](#run).
 
-Порядок установки
------------------
+Scripts will download all dependencies and components, then install and start them.
+Also scripts configure autostart. Operations take ~3–5 minutes.
 
- 1. Изменить параметры в файле *config.sh*
- 2. Изменить настройки Nginx в файле *nginx.conf*
- 3. Изменить настройки CouchBox в файле *couchbox.json*
- 4. Загрузить файлы на сервер и запустить
+Fast internet connection and at least 2Gb of RAM required (npm is hungry, sorry).
 
-``` bash
-ssh root@server
-cd /tmp
-git clone git@gitlab.com:Couchbox/install.git couchbox_install
-cd /tmp/couchbox_install/Ubuntu
-sh install.sh
-```
+## Preconfigure
 
-После установки Couchbox будет доступен по адресу https://server:6984
+Setup params in:
+
+* config.sh 
+* nginx.conf
+* couchbox.json
+
+## Run
+
+Run install script, typing `sh install.sh` in appropriate folder. After installation
+process finished, Couchbox is accessible at https://server:6984
