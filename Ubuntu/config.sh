@@ -11,6 +11,9 @@ NODE_NAME=cb
 COUCHDB_USER=couchbox
 COUCHDB_PASS=couchbox
 
+# CouchDB secret key
+# COUCHDB_SECRET=13654715ddd9d7f36e4caf54592be889
+
 # CouchDB port config, better kept intact
 COUCHDB_PORT=5984
 COUCHDB_SSL_PORT=6984
@@ -26,4 +29,3 @@ NODE_ENV=production
 # LOGGER_DB=log
 # LOGGER_DB_SAVE=true
 # LOGGER_BULK_SIZE=100
-

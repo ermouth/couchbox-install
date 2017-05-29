@@ -17,6 +17,7 @@ if [ -z ${COUCHDB_PORT+x} ]; then COUCHDB_PORT=5984; else echo "COUCHDB_PORT is 
 if [ -z ${COUCHDB_SSL_PORT+x} ]; then COUCHDB_SSL_PORT=6984; else echo "COUCHDB_SSL_PORT is set to '$COUCHDB_SSL_PORT'"; fi
 if [ -z ${COUCHDB_LOCALE+x} ]; then COUCHDB_LOCALE=RU; else echo "COUCHDB_LOCALE is set to '$COUCHDB_LOCALE'"; fi
 if [ -z ${COUCHDB_UUID+x} ]; then COUCHDB_UUID=$(dbus-uuidgen); else echo "COUCHDB_UUID is set to '$COUCHDB_UUID'"; fi
+if [ -z ${COUCHDB_SECRET+x} ]; then COUCHDB_SECRET=$(dbus-uuidgen); else echo "COUCHDB_SECRET is set to '$COUCHDB_SECRET'"; fi
 
 
 # stop couchdb
@@ -71,6 +72,7 @@ bind_address = 0.0.0.0
 ; above. If you don't configure a WWW-Authenticate header, CouchDB will send
 ; Basic realm="server" in order to prevent you getting logged out.
 ; require_valid_user = false
+secret = $COUCHDB_SECRET
 timeout = 172800
 
 [log]
