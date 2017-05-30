@@ -1,0 +1,20 @@
+{
+  "_id": "_design/test",
+  "name": "test",
+  "api": {
+    "json": {
+      "timeout": 5000,
+      "lambda": "function (req) { resolve({ code:200, json:{ text: 'Hello!' } }); }"
+    }
+  },
+  "filters": {
+    "test": "function (doc) { return doc && doc.name === 'test'; }"
+  },
+  "hooks": {
+    "test": {
+      "timeout": 10000,
+      "mode": "parallel",
+      "lambda": "function (doc) { resolve({ code:200, message:'DONE!' }); }"
+    }
+  }
+}

@@ -57,7 +57,7 @@ EOF
 
 
 # configure couchbox
-sh -c "/usr/bin/node /home/couchbox/services/couchbox/setup.js $BASEDIR/couchbox.json -n $NODE_NAME -u $COUCHDB_USER -p $COUCHDB_PASS -r $REDIS_PASS -A 127.0.0.1 -P $COUCHDB_PORT -s $COUCHDB_SECRET"
+sh -c "/usr/bin/node /home/couchbox/services/couchbox/setup.js $BASEDIR/couchbox.json -D $BASEDIR/test=_design-test.json -n $NODE_NAME -u $COUCHDB_USER -p $COUCHDB_PASS -r $REDIS_PASS -A 127.0.0.1 -P $COUCHDB_PORT -s $COUCHDB_SECRET"
 
 
 # start couchbox & add to startup
