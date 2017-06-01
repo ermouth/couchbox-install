@@ -1,7 +1,12 @@
 #!/bin/sh
 
+# config root dir
+BASEDIR=$(dirname "$0")
+BASEDIRPATH=$(realpath $BASEDIR)
+
+
 # Proxy user to install components not on behalf of root
-USER_NAME=ubuntu
+USER_NAME=couchbox
 
 # Node name, used in multinode systems
 NODE_NAME=cb
@@ -29,3 +34,6 @@ NODE_ENV=production
 # LOGGER_DB=log
 # LOGGER_DB_SAVE=true
 # LOGGER_BULK_SIZE=100
+
+COUCHBOX_JSON=$BASEDIR/couchbox.json
+COUCHBOX_DOCS=$BASEDIR/couchbox=_design-demo.json

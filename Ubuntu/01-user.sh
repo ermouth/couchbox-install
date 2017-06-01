@@ -10,6 +10,7 @@ BASEDIR=$(dirname "$0")
 BASEDIRPATH=$(realpath $BASEDIR)
 . $BASEDIRPATH/config.sh
 
+
 # vars
 if [ -z ${USER_NAME+x} ]; then USER_NAME=ubuntu; else echo "USER_NAME is set to '$USER_NAME'"; fi
 USER_DIR=/home/$USER_NAME
@@ -17,7 +18,8 @@ USER_DIR=/home/$USER_NAME
 
 # add user
 mkdir $USER_DIR
-useradd -d $USER_DIR $USER_NAME
+groupadd couchbox
+useradd -d $USER_DIR -g couchbox $USER_NAME
 chown -R $USER_NAME: $USER_DIR
 usermod -aG sudo $USER_NAME
 

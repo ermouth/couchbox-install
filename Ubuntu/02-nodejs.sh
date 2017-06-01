@@ -11,9 +11,14 @@ BASEDIRPATH=$(realpath $BASEDIR)
 . $BASEDIRPATH/config.sh
 
 
-# install nodejs 7.x
-curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
-sudo apt-get install -y nodejs
+# install nodejs 8.x
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y build-essential nodejs
+
+sudo chown -R $USER_NAME:$(id -gn $USER_NAME) /home/$USER_NAME/.config
+
+sudo npm -g update
+sudo npm -g update npm
 
 
 echo "DONE 02-nodejs.sh"

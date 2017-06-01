@@ -1,10 +1,10 @@
 {
-  "_id": "_design/test",
-  "name": "test",
+  "_id": "_design/demo",
+  "name": "demo",
   "api": {
-    "json": {
+    "index": {
       "timeout": 5000,
-      "lambda": "function (req) { resolve({ code:200, json:{ text: 'Hello!' } }); }"
+      "lambda": "function (req) { resolve({ code:200, json:{ text: 'Wellcome to Couchbox!' } }); }"
     }
   },
   "filters": {
