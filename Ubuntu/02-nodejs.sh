@@ -15,7 +15,8 @@ BASEDIRPATH=$(realpath $BASEDIR)
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y build-essential nodejs
 
-sudo chown -R $USER_NAME:$(id -gn $USER_NAME) /home/$USER_NAME/.config
+npm -v
+sudo chown -R $USER_NAME:couchbox /home/$USER_NAME/.config
 
 sudo npm -g update
 sudo npm -g update npm

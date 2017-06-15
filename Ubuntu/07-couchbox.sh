@@ -15,19 +15,22 @@ BASEDIRPATH=$(realpath $BASEDIR)
 sudo apt-get install git sendmail libjpeg-progs -y
 
 
-sudo mkdir /home/$USER_NAME/services
-sudo mkdir /var/log/couchbox
-sudo ln -s /var/log/couchbox /home/$USER_NAME/logs
+mkdir ~/services
+mkdir ~/logs
 
-sudo chown -R $USER_NAME:couchbox /home/$USER_NAME/services
+sudo mkdir /var/log/couchbox
 sudo chown -R $USER_NAME:couchbox /var/log/couchbox
 sudo chmod 770 /var/log/couchbox
+
+ln -s /var/log/couchbox ~/logs/couchbox
+ln -s /var/log/couchdb  ~/logs/couchdb
 
 
 # clone repo
 cd /home/$USER_NAME/services
 # you can use your git account https://username:password@gitlab.com/Couchbox/couchbox.git
 git clone git@gitlab.com:Couchbox/couchbox.git
+
 
 # install npm modules
 cd couchbox

@@ -39,5 +39,9 @@ sudo chmod 664 /etc/couchdb/*.ini
 sudo chmod 775 /etc/couchdb/*.d
 
 
+# add current user to couchdb group
+usermod -aG couchdb $USER_NAME
+
+
 echo "DONE 03-couchdb.sh"
 exit 0

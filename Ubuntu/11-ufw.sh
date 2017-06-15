@@ -31,6 +31,9 @@ sudo ufw allow $COUCHDB_SSL_PORT
 # allow redis-commander
 sudo ufw allow 8881
 
+# allow api proxy for debug
+sudo ufw allow 8888
+
 # enable ufw
 sudo ufw --force enable
 
