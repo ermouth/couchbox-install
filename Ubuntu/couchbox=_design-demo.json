@@ -4,7 +4,7 @@
   "api": {
     "index": {
       "timeout": 5000,
-      "lambda": "function (req) { resolve({ code:200, json:{ text: 'Wellcome to Couchbox!' } }); }"
+      "lambda": "function (req) { resolve({ code:200, json:{ text: 'Welcome to Couchbox!' } }); }"
     }
   },
   "filters": {
