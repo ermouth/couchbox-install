@@ -29,9 +29,9 @@
     "html2pdf": "{\"node\":\"lc\",\"ctx\":{\"name\":\"system\",\"roles\":[\"dev\"]},\"base\":\"/cloudwall/v2/css\"}"
   },
   "couchbox_api": {
-    "|": "couchbox/demo bucket socket cache jpegtran fetch email"
+    "!": "couchbox/demo bucket socket cache jpegtran fetch email"
   },
   "couchbox_hooks": {
-    "couchbox|demo": "bucket socket cache jpegtran fetch email"
+    "couchbox!demo": "bucket socket cache jpegtran fetch email"
   }
 }
