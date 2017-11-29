@@ -17,8 +17,8 @@
     "redis_port": "6379",
     "socket": "{ \"active\":true, \"port\":8000, \"path\":\"/_socket\"}",
     "log_db": "log",
-    "log_dbSave": false,
-    "log_bulkSize": 100
+    "log_dbSave": "false",
+    "log_bulkSize": "100"
   },
   "couchbox_plugins": {
     "cache": "{\"ttl\": 60}",
@@ -29,7 +29,7 @@
     "html2pdf": "{\"node\":\"lc\",\"ctx\":{\"name\":\"system\",\"roles\":[\"dev\"]},\"base\":\"/cloudwall/v2/css\"}"
   },
   "couchbox_api": {
-    "!": "couchbox/demo bucket socket cache jpegtran fetch email"
+    "localhost!": "couchbox/demo bucket socket cache jpegtran fetch email"
   },
   "couchbox_hooks": {
     "couchbox!demo": "bucket socket cache jpegtran fetch email"
