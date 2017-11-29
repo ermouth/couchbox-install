@@ -1,19 +1,27 @@
 # Couchbox install for Ubuntu 14+
 
 This set of scripts installs and starts CouchDB 1.6.1, Redis, nginx, nodejs, UFW 
-and Couchbox over clean Ubuntu. You can a) clone this repo, or 
-b) download  [archive.tar](https://gitlab.com/Couchbox/install/repository/archive.tar?ref=master) 
-into temp folder and unpack it. 
+and Couchbox over clean Ubuntu. 
 
-Next, [preconfigure](#preconfigure) installation scripts and [run the sequence](#run). 
+You can a) clone this repo, or 
+b) download  [archive.tar](https://gitlab.com/Couchbox/install/repository/archive.tar?ref=master) 
+into temp folder and unpack it. All stuff is located at `install/Ubuntu`.
+
+To configure, check/edit `config.sh` script, then if necessary `nginx.conf` and `couchbox.json`.
+To run install type `sudo sh install.sh`. 
+
 Scripts will download all dependencies and components, then install and start them.
 Also scripts will configure all required autostarts. 
 
-Fast internet connection and at least 2Gb of RAM required (npm is hungry, sorry).
+Installation takes 5–10 minutes normally. Fast internet connection and at least 
+2Gb of RAM required (npm is hungry, sorry).
+
+After install finishes, check `http://localhost/index`. It must return `{ text: 'Welcome to Couchbox!' }` 
+json.
+
+Watch 8 min [YouTube video](https://youtu.be/SzRzMZVN5NU), showing installation process.
 
 ## Preconfigure
-
-Setup params in:
 
 #### config.sh
 
@@ -30,7 +38,11 @@ routed to couchbox.
 Set up CORS, emergency notification email address (`couchbox.mail` section), nodename
 and plugins config.
 
-## Run
+## CVE-2017-12635 note
 
-Run install script, typing `sh install.sh` in appropriate folder. After installation
-process finished, Couchbox is accessible at https://server:6984
+Since Couchbox installs CouchDB 1.6.1, which has serious vulnerability, you may use
+[special recipe](http://bit.ly/2mRUt37), patching the hole.
+
+
+-----------
+(c) 2017 ftescht, ermouth. Couchbox is MIT licensed.
