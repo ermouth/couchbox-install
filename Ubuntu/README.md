@@ -1,5 +1,4 @@
 # <img align="right" src="https://cdn.cloudwall.me/couchbox/couchbox-github.svg" /> Couchbox install for Ubuntu 20
-
 This set of scripts installs and starts CouchDB, Redis, nginx, nodejs, UFW 
 and Couchbox over clean Ubuntu 20. 
 
