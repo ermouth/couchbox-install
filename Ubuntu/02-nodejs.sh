@@ -11,9 +11,9 @@ BASEDIRPATH=$(realpath $BASEDIR)
 . $BASEDIRPATH/config.sh
 
 
-# install nodejs 8.x
-curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-sudo apt-get install -y build-essential nodejs
+# install nodejs
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt-get install -y build-essential nodejs npm
 
 npm -v
 sudo chown -R $USER_NAME:couchbox /home/$USER_NAME/.config
