@@ -27,7 +27,7 @@ sudo ufw allow 8881
 # allow api proxy: !!! FOR DEBUG ONLY
 sudo ufw allow 8888
 echo ""
-echo "===== DEBUG 8888 PORT IS OPEN! =====" 
+echo -e "\033[0;31m===== DEBUG 8888 PORT IS OPEN! =====" 
 echo "Close it by 'sudo ufw deny 8888' if it is no more needed."
 echo ""
 
