@@ -12,8 +12,10 @@ BASEDIRPATH=$(realpath $BASEDIR)
 
 
 # install nodejs
-curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-sudo apt-get install -y build-essential nodejs npm
+# curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+curl -s https://deb.nodesource.com/setup_16.x | sudo bash
+sudo apt install build-essential -y
+sudo apt install nodejs -y
 
 npm -v
 sudo chown -R $USER_NAME:couchbox /home/$USER_NAME/.config
