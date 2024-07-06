@@ -14,7 +14,6 @@ BASEDIRPATH=$(realpath $BASEDIR)
 if [ -z ${COUCHDB_USER+x} ]; then COUCHDB_USER=couchbox; else echo "COUCHDB_USER is set to '$COUCHDB_USER'"; fi
 if [ -z ${COUCHDB_PASS+x} ]; then COUCHDB_PASS=couchbox; else echo "COUCHDB_PASS is set to '$COUCHDB_PASS'"; fi
 if [ -z ${COUCHDB_PORT+x} ]; then COUCHDB_PORT=5984; else echo "COUCHDB_PORT is set to '$COUCHDB_PORT'"; fi
-if [ -z ${COUCHDB_SSL_PORT+x} ]; then COUCHDB_SSL_PORT=6984; else echo "COUCHDB_SSL_PORT is set to '$COUCHDB_SSL_PORT'"; fi
 if [ -z ${COUCHDB_LOCALE+x} ]; then COUCHDB_LOCALE=RU; else echo "COUCHDB_LOCALE is set to '$COUCHDB_LOCALE'"; fi
 if [ -z ${COUCHDB_UUID+x} ]; then COUCHDB_UUID=$(dbus-uuidgen); else echo "COUCHDB_UUID is set to '$COUCHDB_UUID'"; fi
 if [ -z ${COUCHDB_SECRET+x} ]; then COUCHDB_SECRET=$(dbus-uuidgen); else echo "COUCHDB_SECRET is set to '$COUCHDB_SECRET'"; fi
@@ -22,13 +21,6 @@ if [ -z ${COUCHDB_SECRET+x} ]; then COUCHDB_SECRET=$(dbus-uuidgen); else echo "C
 
 # stop couchdb
 sudo service couchdb stop
-
-
-# create SSL certs
-# sudo mkdir /etc/couchdb/cert
-# sudo openssl genrsa -out /etc/couchdb/cert/couch_key.pem 4096
-# sudo openssl req -new -x509 -key /etc/couchdb/cert/couch_key.pem -out /etc/couchdb/cert/couch_cert.pem -days 1095 -subj "/C=$COUCHDB_LOCALE"
-
 
 # create local.ini
 cat <<EOF | sudo tee /opt/couchdb/etc/local.ini

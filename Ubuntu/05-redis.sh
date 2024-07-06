@@ -13,20 +13,7 @@ BASEDIRPATH=$(realpath $BASEDIR)
 
 # update & install deps
 sudo apt-get update -y
-sudo apt-get install build-essential tcl -y
-
-
-# download redis
-# cd /tmp
-# curl -O http://download.redis.io/redis-stable.tar.gz
-# tar xzvf redis-stable.tar.gz
-
-
-# install redis
-# cd redis-stable
-# make
-# make test
-# sudo make install
+sudo apt-get install tcl -y
 
 sudo apt install redis-server
 

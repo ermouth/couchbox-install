@@ -54,6 +54,7 @@ echo ""
 echo "Testing if couchbox works..."
 echo ""
 echo `curl http://localhost/index --no-progress-meter`
+echo ""
 echo " ^^^ You must see JSON with Welcome to Couchbox phrase."
 echo "     If you see it install was ok and Couchbox is running."
 exit 0
