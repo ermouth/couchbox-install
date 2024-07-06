@@ -17,17 +17,18 @@ sudo apt-get install build-essential tcl -y
 
 
 # download redis
-cd /tmp
-curl -O http://download.redis.io/redis-stable.tar.gz
-tar xzvf redis-stable.tar.gz
+# cd /tmp
+# curl -O http://download.redis.io/redis-stable.tar.gz
+# tar xzvf redis-stable.tar.gz
 
 
 # install redis
-cd redis-stable
-make
+# cd redis-stable
+# make
 # make test
-sudo make install
+# sudo make install
 
+sudo apt install redis-server
 
 echo "DONE 05-redis.sh"
 exit 0
