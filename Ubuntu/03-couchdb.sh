@@ -55,8 +55,8 @@ sudo chown -R couchdb:couchdb /var/log/couchdb
 sudo chmod -R 0770 /opt/couchdb
 sudo chmod -R 0770 /var/log/couchdb
 
-sudo chmod 664 /opt/couchdb/etc/couchdb/*.ini
-sudo chmod 775 /opt/couchdb/etc/couchdb/*.d
+sudo chmod 664 /opt/couchdb/etc/local.ini
+sudo chmod 775 /opt/couchdb/etc/local.d
 
 
 # add current user to couchdb group
