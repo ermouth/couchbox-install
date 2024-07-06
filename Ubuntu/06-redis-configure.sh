@@ -29,10 +29,10 @@ sudo sed -i "s/dir .\//dir \/var\/lib\/redis/g" /etc/redis/redis.conf
 
 
 # fix permissions & add user redis
-sudo mkdir /var/lib/redis
-sudo adduser --system --group --no-create-home redis
-sudo chown redis:redis /var/lib/redis
-sudo chmod 770 /var/lib/redis
+# sudo mkdir /var/lib/redis
+# sudo adduser --system --group --no-create-home redis
+# sudo chown redis:redis /var/lib/redis
+# sudo chmod 770 /var/lib/redis
 
 
 # systemd service script

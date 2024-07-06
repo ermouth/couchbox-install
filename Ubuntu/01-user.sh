@@ -25,7 +25,7 @@ usermod -aG sudo $USER_NAME
 
 
 # add user to sudores
-echo "$USER_NAME ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+sudo echo "$USER_NAME ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 
 echo "DONE 01-user.sh"
