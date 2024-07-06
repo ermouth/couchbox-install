@@ -29,7 +29,7 @@ ln -s /var/log/couchdb  ~/logs/couchdb
 # clone repo
 cd /home/$USER_NAME/services
 # you can use your git account https://username:password@gitlab.com/Couchbox/couchbox.git
-git clone https://gitlab.com/Couchbox/couchbox
+git clone https://github.com/ermouth/couchbox
 
 
 # install npm modules
