@@ -8,16 +8,16 @@
     "debug": "true",
     "mail": "{ \"active\":true, \"from\":\"CouchBox\", \"recipients\":\"recipient@someaddress.com\"}",
     "max_parallel_changes": "16",
-    "nodename": "lc",
-    "nodes": "{ \"lc\": \"https://localhost:5984\"}",
+    "nodename": "n1",
+    "nodes": "{ \"n1\": \"https://localhost:5984\"}",
     "proxy": "{ \"active\":true, \"port\":8888, \"path\":\"/\"}",
-    "redis_commander": "{ \"active\":true, \"port\":8881, \"user\":\"rc\", \"pass\":\"password\"}",
+    "redis_commander": "{ \"active\":false, \"port\":8881, \"user\":\"rc\", \"pass\":\"password\"}",
     "redis_ip": "localhost",
     "redis_password": "",
     "redis_port": "6379",
     "socket": "{ \"active\":true, \"port\":8000, \"path\":\"/_socket\"}",
     "log_db": "log",
-    "log_dbSave": "false",
+    "log_dbSave": "true",
     "log_bulkSize": "100"
   },
   "couchbox_plugins": {
@@ -26,7 +26,7 @@
     "email": "{\"from\":\"\",\"service\":\"Yandex\",\"host\":\"smtp.yandex.ru\",\"port\":465,\"secure\":true,\"user\":\"\", \"pass\":\"\"}",
     "sms": "{\"key\":\"\", \"from\":\"\"}",
     "kkm": "{\"url\":\"http://localhost:5893\",\"login\":\"Admin\",\"password\":\"\",\"timeout\":30,\"requestTimeout\":10000,\"company\":\"Couchbox\",\"cashier\":\"Couchbox software\",\"tax\":-1}",
-    "html2pdf": "{\"node\":\"lc\",\"ctx\":{\"name\":\"system\",\"roles\":[\"dev\"]},\"base\":\"/cloudwall/v2/css\"}"
+    "html2pdf": "{\"node\":\"n1\",\"ctx\":{\"name\":\"system\",\"roles\":[\"dev\"]},\"base\":\"/cloudwall/v2/css\"}"
   },
   "couchbox_api": {
     "localhost!": "couchbox/demo bucket socket cache jpegtran fetch email"

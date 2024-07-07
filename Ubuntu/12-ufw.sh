@@ -22,7 +22,7 @@ sudo ufw allow 80
 sudo ufw allow 443
 
 # allow redis-commander
-sudo ufw allow 8881
+# sudo ufw allow 8881
 
 # allow api proxy: !!! FOR DEBUG ONLY
 sudo ufw allow 8888
@@ -30,11 +30,10 @@ sudo ufw allow 8888
 # enable ufw
 sudo ufw --force enable
 
-echo "DONE 11-ufw.sh"
-
 echo ""
 echo "===== DEBUG 8888 PORT IS OPEN! =====" 
 echo "Close it by 'sudo ufw deny 8888' if it is no more needed."
+echo "DONE 12-ufw.sh"
 echo ""
 
 exit 0
