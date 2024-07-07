@@ -10,10 +10,6 @@ BASEDIR=$(dirname "$0")
 BASEDIRPATH=$(realpath $BASEDIR)
 . $BASEDIRPATH/config.sh
 
-# vars
-if [ -z ${COUCHDB_SSL_PORT+x} ]; then COUCHDB_SSL_PORT=6984; else echo "COUCHDB_SSL_PORT is set to '$COUCHDB_SSL_PORT'"; fi
-
-
 # update & install ufw
 sudo apt-get update -y
 sudo apt-get install ufw -y
@@ -25,18 +21,19 @@ sudo ufw allow 22
 sudo ufw allow 80
 sudo ufw allow 443
 
-# allow https couchdb
-sudo ufw allow $COUCHDB_SSL_PORT
-
 # allow redis-commander
-sudo ufw allow 8881
+# sudo ufw allow 8881
 
-# allow api proxy for debug
+# allow api proxy: !!! FOR DEBUG ONLY
 sudo ufw allow 8888
 
 # enable ufw
 sudo ufw --force enable
 
+echo ""
+echo "===== DEBUG 8888 PORT IS OPEN! =====" 
+echo "Close it by 'sudo ufw deny 8888' if it is no more needed."
+echo "DONE 12-ufw.sh"
+echo ""
 
-echo "DONE 11-ufw.sh"
 exit 0

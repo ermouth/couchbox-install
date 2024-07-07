@@ -45,10 +45,18 @@ su -c "sh $BASEDIRPATH/09-nginx.sh" - $USER_NAME
 # nginx config
 su -c "sh $BASEDIRPATH/10-nginx-config.sh" - $USER_NAME
 
+# install couch-photon and create log DB
+su -c "sh $BASEDIRPATH/11-photon.sh" - $USER_NAME
+
 # ufw config
-su -c "sh $BASEDIRPATH/11-ufw.sh" - $USER_NAME
-
-
+su -c "sh $BASEDIRPATH/12-ufw.sh" - $USER_NAME
 
 echo "DONE install.sh"
+echo ""
+echo "Testing if couchbox works..."
+echo ""
+echo `curl http://localhost/index --no-progress-meter`
+echo ""
+echo " ^^^ You must see JSON with Welcome to Couchbox phrase."
+echo "     If you see it install was ok and Couchbox is running."
 exit 0

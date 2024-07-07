@@ -21,7 +21,7 @@ COUCHDB_PASS=couchbox
 
 # CouchDB port config, better kept intact
 COUCHDB_PORT=5984
-COUCHDB_SSL_PORT=6984
+# COUCHDB_SSL_PORT=6984
 
 # Redis pwd, set after installation. Couchbox
 # fetches Redis using this pwd.
@@ -31,9 +31,9 @@ REDIS_PASS=couchbox
 NODE_ENV=production
 
 # Sets up logging into CouchDB
-# LOGGER_DB=log
-# LOGGER_DB_SAVE=true
-# LOGGER_BULK_SIZE=100
+LOGGER_DB=log
+LOGGER_DB_SAVE=true
+LOGGER_BULK_SIZE=100
 
 COUCHBOX_JSON=$BASEDIR/couchbox.json
 COUCHBOX_DOCS=$BASEDIR/couchbox=_design-demo.json

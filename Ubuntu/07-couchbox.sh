@@ -14,7 +14,18 @@ BASEDIRPATH=$(realpath $BASEDIR)
 # deps
 sudo apt-get install git sendmail libjpeg-progs -y
 
+# make log db
+if [ -z ${COUCHDB_USER+x} ]; then COUCHDB_USER=couchbox; else echo "COUCHDB_USER is set to '$COUCHDB_USER'"; fi
+if [ -z ${COUCHDB_PASS+x} ]; then COUCHDB_PASS=couchbox; else echo "COUCHDB_PASS is set to '$COUCHDB_PASS'"; fi
+if [ -z ${COUCHDB_PORT+x} ]; then COUCHDB_PORT=5984; else echo "COUCHDB_PORT is set to '$COUCHDB_PORT'"; fi
+if [ -z ${LOGGER_DB+x} ]; then LOGGER_DB=log; else echo "Couchbox log DB is set to '$LOGGER_DB'"; fi
 
+COUCH="http://$COUCHDB_USER:$COUCHDB_PASS@127.0.0.1:$COUCHDB_PORT"
+HEAD="-H Content-Type:application/json"
+curl $HEAD -X PUT $COUCH/$LOGGER_DB
+echo "Created log DB for Couchbox"
+
+# directories and links, if not present
 mkdir ~/services
 mkdir ~/logs
 
@@ -28,8 +39,7 @@ ln -s /var/log/couchdb  ~/logs/couchdb
 
 # clone repo
 cd /home/$USER_NAME/services
-# you can use your git account https://username:password@gitlab.com/Couchbox/couchbox.git
-git clone https://gitlab.com/Couchbox/couchbox
+git clone https://github.com/ermouth/couchbox
 
 
 # install npm modules

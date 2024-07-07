@@ -16,6 +16,9 @@ apt-get update -y
 apt-get upgrade -y
 apt-get install build-essential curl -y
 
+apt update -y
+apt upgrade -y
+
 
 echo "DONE 00-prepare.sh"
 exit 0

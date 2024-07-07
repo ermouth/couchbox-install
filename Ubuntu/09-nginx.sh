@@ -12,8 +12,8 @@ BASEDIRPATH=$(realpath $BASEDIR)
 
 
 # update & install nginx
-sudo apt-get update -y
-sudo apt-get install nginx -y
+sudo apt update -y
+sudo apt install nginx -y
 
 
 echo "DONE 09-nginx.sh"
