@@ -8,9 +8,10 @@ You can a) clone this repo, or b) download
 into temp folder and unpack it. All stuff is located in `couchbox-install/Ubuntu` folder.
 
 To preconfigure your Couchbox tune `config.sh` script, then if necessary `nginx.conf`, 
-and then `couchbox.json`. 
+and then `couchbox.json`. If you already have some components installed comment them out from 
+`install.sh` script, they all are one-liners and easy to locate.
 
-__To run installator type `sudo sh install.sh`.__
+__To run installer type `sudo sh install.sh`.__
 
 Scripts will download all dependencies and components, then install and start them.
 Also scripts configure autostarts. Setup takes 5–10 minutes normally, fast internet 
