@@ -12,11 +12,11 @@ BASEDIRPATH=$(realpath $BASEDIR)
 
 # vars
 if [ -z ${COUCHDB_USER+x} ]; then COUCHDB_USER=couchbox; else echo "COUCHDB_USER is set to '$COUCHDB_USER'"; fi
-if [ -z ${COUCHDB_PASS+x} ]; then COUCHDB_PASS=couchbox; else echo "COUCHDB_PASS is set to '$COUCHDB_PASS'"; fi
+if [ -z ${COUCHDB_PASS+x} ]; then COUCHDB_PASS=couchbox; else echo "COUCHDB_PASS is set to *****"; fi
 if [ -z ${COUCHDB_PORT+x} ]; then COUCHDB_PORT=5984; else echo "COUCHDB_PORT is set to '$COUCHDB_PORT'"; fi
-if [ -z ${COUCHDB_SECRET+x} ]; then COUCHDB_SECRET=$(dbus-uuidgen); else echo "COUCHDB_SECRET is set to '$COUCHDB_SECRET'"; fi
-if [ -z ${REDIS_PASS+x} ]; then REDIS_PASS=couchbox; else echo "REDIS_PASS is set to '$REDIS_PASS'"; fi
-if [ -z ${NODE_NAME+x} ]; then NODE_NAME=cb; else echo "NODE_NAME is set to '$NODE_NAME'"; fi
+if [ -z ${COUCHDB_SECRET+x} ]; then COUCHDB_SECRET=$(dbus-uuidgen); else echo "COUCHDB_SECRET is set to ********"; fi
+if [ -z ${REDIS_PASS+x} ]; then REDIS_PASS=couchbox; else echo "REDIS_PASS is set to *****"; fi
+if [ -z ${NODE_NAME+x} ]; then NODE_NAME=n1; else echo "NODE_NAME is set to '$NODE_NAME'"; fi
 if [ -z ${NODE_ENV+x} ]; then NODE_ENV=production; else echo "NODE_ENV is set to '$NODE_ENV'"; fi
 
 if [ -z ${COUCHBOX_JSON+x} ]; then COUCHBOX_JSON=; else echo "COUCHBOX_JSON is set to '$COUCHBOX_JSON'"; fi

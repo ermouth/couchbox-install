@@ -7,17 +7,18 @@ You can a) clone this repo, or b) download
 [couchbox-install-master.zip](https://github.com/ermouth/couchbox-install/archive/refs/heads/master.zip) 
 into temp folder and unpack it. All stuff is located in `couchbox-install/Ubuntu` folder.
 
-To preconfigure your Couchbox check/edit `config.sh` script, then if necessary `nginx.conf`, 
+To preconfigure your Couchbox tune `config.sh` script, then if necessary `nginx.conf`, 
 and then `couchbox.json`. 
 
-_To run installator type `sudo sh install.sh`. 
+__To run installator type `sudo sh install.sh`.__
 
 Scripts will download all dependencies and components, then install and start them.
 Also scripts configure autostarts. Setup takes 5–10 minutes normally, fast internet 
 connection and at least 3Gb of RAM required (npm is hungry, sorry).
 
 After install finishes check `http://localhost/index`. It must return `{ text: 'Welcome to Couchbox!' }` 
-json.
+json which is served by Couchbox-mounted API endpoint from the `couchbox=_design-demo.json` design 
+document.
 
 Watch 8 min [YouTube video](https://youtu.be/SzRzMZVN5NU) showing installation process.
 

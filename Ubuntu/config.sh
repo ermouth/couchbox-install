@@ -9,7 +9,7 @@ BASEDIRPATH=$(realpath $BASEDIR)
 USER_NAME=couchbox
 
 # Node name, used in multinode systems
-NODE_NAME=cb
+NODE_NAME=n1
 
 # User with _admin access, created in CouchDB after installation.
 # The user is also used by Couchbox to access CouchDB.
@@ -17,6 +17,7 @@ COUCHDB_USER=couchbox
 COUCHDB_PASS=couchbox
 
 # CouchDB secret key
+# You can preset one or it will be generated
 # COUCHDB_SECRET=13654715ddd9d7f36e4caf54592be889
 
 # CouchDB port config, better kept intact
