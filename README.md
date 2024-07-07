@@ -12,5 +12,8 @@ Installator is intended for fast deployment of new Couchbox nodes so it runs bes
 on a clean OS, out of external utils only `curl` and `git` must be present. You can 
 pre-install them typing `sudo apt install curl git -y`.
 
+If you already have some components installed and configured you can comment out 
+appropriate installers in `install.sh` script before running it.
+
 -----------
 (c) 2024 ermouth, ftescht. Couchbox and Couchbox-install are MIT licensed.

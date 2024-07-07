@@ -11,7 +11,7 @@ BASEDIRPATH=$(realpath $BASEDIR)
 . $BASEDIRPATH/config.sh
 
 # vars
-if [ -z ${REDIS_PASS+x} ]; then REDIS_PASS=couchbox; else echo "REDIS_PASS is set to '$REDIS_PASS'"; fi
+if [ -z ${REDIS_PASS+x} ]; then REDIS_PASS=couchbox; else echo "REDIS_PASS is set to *****"; fi
 
 # stop redis
 sudo service redis stop
