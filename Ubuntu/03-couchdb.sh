@@ -11,7 +11,7 @@ BASEDIRPATH=$(realpath $BASEDIR)
 . $BASEDIRPATH/config.sh
 
 # ubuntu codename
-VERSION_CODENAME=focal
+VERSION_CODENAME=$(lsb_release -c -s)
 
 # add couchdb repo & update
 sudo apt update && sudo apt install -y curl apt-transport-https gnupg
