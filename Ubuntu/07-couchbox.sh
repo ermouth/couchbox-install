@@ -39,13 +39,13 @@ ln -s /var/log/couchdb  ~/logs/couchdb
 
 # clone repo
 cd /home/$USER_NAME/services
-git clone https://github.com/ermouth/couchbox.git
-
+git clone --progress --verbose https://github.com/ermouth/couchbox.git
+cd couchbox
+git pull
+git switch master
 
 # install npm modules
-cd couchbox
 npm install
-
 
 echo "DONE 07-couchbox.sh"
 exit 0
