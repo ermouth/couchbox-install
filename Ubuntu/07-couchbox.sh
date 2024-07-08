@@ -39,7 +39,7 @@ ln -s /var/log/couchdb  ~/logs/couchdb
 
 # clone repo
 cd /home/$USER_NAME/services
-git clone https://github.com/ermouth/couchbox
+git clone https://github.com/ermouth/couchbox.git
 
 
 # install npm modules
