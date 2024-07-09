@@ -15,7 +15,7 @@ BASEDIRPATH=$(realpath $BASEDIR)
 sudo apt-get update -y
 sudo apt-get install tcl -y
 
-sudo apt install redis-server
+sudo apt install -y redis-server
 
 echo "DONE 05-redis.sh"
 exit 0
