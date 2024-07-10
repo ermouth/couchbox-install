@@ -1,4 +1,4 @@
-# <img align="right" src="https://cdn.cloudwall.me/couchbox/couchbox-github.svg" /> Couchbox install for Ubuntu 20
+# <img align="right" src="https://cdn.cloudwall.me/couchbox/couchbox-github.svg" /> Couchbox install for Ubuntu 20/22
 
 This set of scripts installs and starts CouchDB, Redis, redis-commander, nginx, nodejs, ufw 
 and Couchbox over clean Ubuntu. Installer was tested on Ubuntu 20 and 22. 
@@ -36,7 +36,7 @@ bind address, Couchbox resets it later, but do provide admin password and whatev
 like random erlang cookie. You need not memorize erlang cookie if no cluster is planned. 
 
 Couchbox installer creates 3 buckets in CouchDB: `log` for reflecting logs, `couchbox` for 
-demo which used for testing in the end of installation process, and also `photon` for 
+demo which is used for testing when installer finishes, and also `photon` for 
 Photon admin panel for CouchDB.
 
 Also Couchbox installer adds an admin into CouchDB; admin’s credentials are defined 
