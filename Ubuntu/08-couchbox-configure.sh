@@ -25,7 +25,7 @@ if [ -z ${COUCHBOX_DOCS+x} ]; then COUCHBOX_DOCS=; else echo "COUCHBOX_DOCS is s
 
 
 # logrotate
-cat <<EOF | sudo tee /etc/logrotate.d/couchbox
+cat <<EOF | sudo tee /etc/logrotate.d/couchbox >/dev/null
 /var/log/couchbox/*.log {
   weekly
   rotate 10
@@ -39,7 +39,7 @@ EOF
 
 
 # systemd service script
-cat <<EOF | sudo tee /etc/systemd/system/couchbox.service
+cat <<EOF | sudo tee /etc/systemd/system/couchbox.service >/dev/null
 [Unit]
 Description=Couchbox
 Wants=network.target couchdb.service redis.service

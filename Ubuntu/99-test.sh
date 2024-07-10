@@ -36,8 +36,9 @@ sleep .5
 echo `curl --no-progress-meter $couch/couchbox/Created_by_Couchbox_test_hook`
 echo ""
 echo ' ^^^ You must see JSON with _id:"Created_by_Couchbox_test_hook".'
-echo '     That doc was created by demo hook which triggered with a doc '
-echo '     {name:"installer test"} just saved into couchbox bucket.' 
+echo '     That doc was created by demo hook which was triggered with a doc '
+echo '     {_id:"InstallerHookTest",name:"installer test"} just saved '
+ech '      into couchbox bucket of local CouchDB.' 
 
 echo ""
 echo "DONE 99-test.sh"
