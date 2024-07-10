@@ -13,6 +13,8 @@ To preconfigure your Couchbox tune `config.sh` script, then if necessary `nginx.
 and then `couchbox.json`. If you already have some components installed comment them out from 
 `install.sh` script, it’s very simple and easy to follow.
 
+Couchbox minimum is 2 core CPU system with 2 Gb of RAM. 
+
 ## Installation
 
 __IMPORTANT: to run installer type `sudo sh install.sh`.__ Do not run install.sh directly 
@@ -20,7 +22,7 @@ from bash or zsh, it will likely fail. Also do not start numbered scripts manual
 
 Scripts will download all dependencies and components, then install and start them.
 Also scripts configure autostarts. Setup takes 5–10 minutes normally, fast internet 
-connection and at least 3Gb of RAM required (npm is hungry, sorry).
+connection and at least 2Gb of RAM required.
 
 Installer runs simple test at the end. The test clearly shows if both Couchbox API 
 and hooks are installed and running.
