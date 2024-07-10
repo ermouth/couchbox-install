@@ -4,17 +4,17 @@
   "api": {
     "index": {
       "timeout": 5000,
-      "lambda": "function (req) { resolve({ code:200, json:{ text: 'Welcome to Couchbox!' } }); }"
+      "lambda": "function (req) {resolve({code:200, json:{text: 'Welcome to Couchbox!'}})}"
     }
   },
   "filters": {
-    "test": "function (doc) { return doc && doc.name === 'test'; }"
+    "test": "function (doc) {return doc && doc.name === 'installer test'}"
   },
   "hooks": {
     "test": {
-      "timeout": 10000,
-      "mode": "parallel",
-      "lambda": "function (doc) { resolve({ code:200, message:'DONE!' }); }"
+      "timeout": 5000, 
+      "mode": "transitive", 
+      "lambda": "function (doc) {resolve({code:200, message:'Hook test ok!', docs:[{_id:'Created_by_Couchbox_test_hook'}]})}"
     }
   }
 }

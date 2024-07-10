@@ -1,6 +1,7 @@
 #!/bin/sh
 
 echo ""
+echo "###########################################################"
 echo "START 04-couchdb-configure.sh"
 echo ""
 
@@ -23,7 +24,7 @@ if [ -z ${COUCHDB_SECRET+x} ]; then COUCHDB_SECRET=$(dbus-uuidgen); else echo "C
 sudo service couchdb stop
 
 # create local.ini
-cat <<EOF | sudo tee /opt/couchdb/etc/local.ini
+cat <<EOF | sudo tee /opt/couchdb/etc/local.ini >/dev/null
 ; CouchDB Configuration Settings
 
 ; Custom settings should be made in this file. They will override settings

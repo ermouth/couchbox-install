@@ -1,6 +1,7 @@
 #!/bin/sh
 
 echo ""
+echo "###########################################################"
 echo "START 10-nginx-config.sh"
 echo ""
 
