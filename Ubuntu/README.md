@@ -13,7 +13,7 @@ To preconfigure your Couchbox tune `config.sh` script, then if necessary `nginx.
 and then `couchbox.json`. If you already have some components installed comment them out from 
 `install.sh` script, it’s very simple and easy to follow.
 
-Couchbox minimum is 2 core CPU system with 2 Gb of RAM. 
+Couchbox absolute minimum is 2 core CPU system with 2 Gb of RAM. 
 
 ## Installation
 
@@ -34,6 +34,13 @@ Watch 8 min [YouTube video](https://youtu.be/SzRzMZVN5NU) showing installation p
 CouchDB installer may ask you several questions during the process. Don’t bother to change 
 bind address, Couchbox resets it later, but do provide admin password and whatever you 
 like random erlang cookie. You need not memorize erlang cookie if no cluster is planned. 
+
+Couchbox installer creates 3 buckets in CouchDB: `log` for reflecting logs, `couchbox` for 
+demo which used for testing in the end of installation process, and also `photon` for 
+Photon admin panel for CouchDB.
+
+Also Couchbox installer adds an admin into CouchDB; admin’s credentials are defined 
+in `config.sh`.
 
 ## After installation
 
