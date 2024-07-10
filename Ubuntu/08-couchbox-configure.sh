@@ -1,6 +1,7 @@
 #!/bin/sh
 
 echo ""
+echo "###########################################################"
 echo "START 08-couchbox-configure.sh"
 echo ""
 

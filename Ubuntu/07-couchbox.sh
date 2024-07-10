@@ -1,6 +1,7 @@
 #!/bin/sh
 
 echo ""
+echo "###########################################################"
 echo "START 07-couchbox.sh"
 echo ""
 
@@ -22,8 +23,10 @@ if [ -z ${LOGGER_DB+x} ]; then LOGGER_DB=log; else echo "Couchbox log DB is set 
 
 COUCH="http://$COUCHDB_USER:$COUCHDB_PASS@127.0.0.1:$COUCHDB_PORT"
 HEAD="-H Content-Type:application/json"
+echo ""
 curl $HEAD -X PUT $COUCH/$LOGGER_DB
 echo "Created log DB for Couchbox"
+echo ""
 
 # directories and links, if not present
 mkdir ~/services

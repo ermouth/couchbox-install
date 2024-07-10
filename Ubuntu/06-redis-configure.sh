@@ -1,6 +1,7 @@
 #!/bin/sh
 
 echo ""
+echo "###########################################################"
 echo "START 06-redis-configure.sh"
 echo ""
 

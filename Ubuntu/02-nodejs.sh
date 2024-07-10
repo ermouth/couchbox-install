@@ -1,6 +1,7 @@
 #!/bin/sh
 
 echo ""
+echo "###########################################################"
 echo "START 02-nodejs.sh"
 echo ""
 
@@ -12,7 +13,7 @@ BASEDIRPATH=$(realpath $BASEDIR)
 
 
 # install nodejs
-curl -s https://deb.nodesource.com/setup_18.x | sudo bash
+curl -s https://deb.nodesource.com/setup_20.x | sudo bash
 sudo apt install build-essential -y
 sudo apt install nodejs -y
 

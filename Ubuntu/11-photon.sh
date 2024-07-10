@@ -1,7 +1,9 @@
 #!/bin/sh
 
 echo ""
+echo "###########################################################"
 echo "START 12-photon.sh"
+echo ""
 
 # config
 BASEDIR=$(dirname "$0")
@@ -18,11 +20,12 @@ couch="http://$COUCHDB_USER:$COUCHDB_PASS@127.0.0.1:$COUCHDB_PORT"
 head="-H Content-Type:application/json"
 curl $head -X PUT $couch/photon
 curl https://raw.githubusercontent.com/ermouth/couch-photon/master/photon.json | \
-curl $head -X PUT $couch/photon/_design/photon -d @- 
+  curl $head -X PUT $couch/photon/_design/photon -d @- 
+
 curl $head -X PUT $couch/photon/_security -d '{}' 
 
 echo "Photon installed";
-echo "Done 11-photon.sh"
+echo "Done 12-photon.sh"
 echo ""
 
 exit 0
